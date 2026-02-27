@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b1120;
+    color:#e2e8f0;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15,23,42,0.8);
+    backdrop-filter:blur(10px);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+nav h2{
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#cbd5e1;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:0 20px;
+    background:linear-gradient(135deg,#0b1120,#111c33);
+}
+
+.hero h1{
+    font-size:55px;
+    font-weight:700;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    color:#94a3b8;
+    max-width:600px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 30px;
+    border-radius:30px;
+    background:#38bdf8;
+    color:#0b1120;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+/* SECTION */
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    font-size:32px;
+    margin-bottom:50px;
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    width:60px;
+    height:3px;
+    background:#38bdf8;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+}
+
+/* CARD */
+.card{
+    background:#111c33;
+    padding:30px;
+    border-radius:18px;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skill{
+    padding:8px 18px;
+    background:#1e293b;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* CONTACT */
+.contact-box{
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#0f172a;
+    color:#64748b;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h1{
+        font-size:38px;
+    }
+    nav ul{
+        gap:15px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <h2>DA</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Hi, I'm <span>Your Name</span></h1>
+    <p>Finance student passionate about equity research, valuation and data-driven investment analysis.</p>
+    <a href="#contact" class="btn">Contact Me</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+        <p>I am deeply interested in financial markets, valuation models, and macroeconomic trends. I enjoy building structured investment theses backed by data and disciplined analysis.</p>
+    </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+    <h2 class="section-title">Highlights</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Top 40 Stockwise 2025</h3>
+            <p>National Investment Competition</p>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Mirae Asset Securities</h3>
+            <p><strong>Investment Intern | 2025</strong></p>
+            <br>
+            <p>• Supported equity research and valuation modeling.</p>
+            <p>• Built financial analysis using Excel.</p>
+            <p>• Assisted in preparing market reports.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>DCF Valuation Model</h3>
+            <p>Built a discounted cash flow model with sensitivity analysis.</p>
+        </div>
+        <div class="card">
+            <h3>Industry Research Report</h3>
+            <p>Analyzed macro factors affecting equity markets.</p>
+        </div>
+        <div class="card">
+            <h3>Portfolio Simulation</h3>
+            <p>Constructed risk-adjusted investment portfolio strategy.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+        <div class="skill">Financial Analysis</div>
+        <div class="skill">Equity Research</div>
+        <div class="skill">DCF Valuation</div>
+        <div class="skill">Excel</div>
+        <div class="skill">PowerPoint</div>
+        <div class="skill">Market Research</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-box card">
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        <p>Phone: +84 xxx xxx xxx</p>
+    </div>
+</section>
+
+<footer>
+© 2026 Your Name. All rights reserved.
+</footer>
+
+</body>
+</html>
